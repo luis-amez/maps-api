@@ -17,3 +17,21 @@
   margin: 10px;
   font-size: 0.8em;
 }
+
+@media (min-width: 600px) {
+  #container {
+    margin: 50px auto;
+    width: 80%;
+    font-size: 1em;
+  }
+
+  #travel-panel {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  #container {
+    max-width: 1200px;
+  }
+}
