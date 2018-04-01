@@ -1,15 +1,20 @@
 function initMap() {
+  // Display map
   var center = {lat: 50.8429, lng: -0.1313};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 6,
     center: center
   });
 
+  // Init directions
   var directionsDisplay = new google.maps.DirectionsRenderer;
   var directionsService = new google.maps.DirectionsService;
   directionsDisplay.setMap(map);
 
+  // Show route for default coordinates
   calculateAndDisplayRoute(directionsService, directionsDisplay, center);
+
+  // Add event listener for user selection
   document.getElementById('mode').addEventListener('change', function() {
     calculateAndDisplayRoute(directionsService, directionsDisplay, center);
   });
@@ -24,7 +29,7 @@ function initMap() {
       map.setCenter(center);
       calculateAndDisplayRoute(directionsService, directionsDisplay, center);
     }, function(error) {
-      // Browser doesn't support Geolocation
+      // Browser doesn't support geolocation
       alert("I don't know where you are, sorry. Let's say that you are in Brighton.");
       console.log(error);
     });
@@ -32,7 +37,10 @@ function initMap() {
 }
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay, origin) {
+  // Take user selection
   var selectedMode = document.getElementById('mode').value;
+
+  // Display route to Oxford
   directionsService.route({
     origin: origin,
     destination: {lat: 51.7519, lng: -1.2578},
