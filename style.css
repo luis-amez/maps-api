@@ -2,3 +2,18 @@
   height: 400px;
   width: 100%;
 }
+
+#container {
+  margin: 20px auto;
+  width: 95%;
+  font-size: 0.8em;
+}
+
+.main-title {
+  text-align: center;
+}
+
+#travel-panel {
+  margin: 10px;
+  font-size: 0.8em;
+}

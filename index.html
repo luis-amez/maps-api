@@ -9,17 +9,19 @@
   <script src="script.js"></script>
 </head>
 <body>
-  <h1>Follow the yellow brick road...</h1>
-  <div id="travel-panel">
-    <b>We're off to see the wizard...</b>
-    <select id="mode">
-      <option value="WALKING">on foot</option>
-      <option value="BICYCLING">by bicycle</option>
-      <option value="TRANSIT">by public transport</option>
-      <option value="DRIVING">by car</option>
-    </select>
-  </div>
-  <div id="map"></div>
+  <section id="container">
+    <h1 class="main-title">Follow the yellow brick road...</h1>
+    <div id="travel-panel">
+      <b>We're off to see the wizard...</b>
+      <select id="mode">
+        <option value="WALKING">on foot</option>
+        <option value="BICYCLING">by bicycle</option>
+        <option value="TRANSIT">by public transport</option>
+        <option value="DRIVING">by car</option>
+      </select>
+    </div>
+    <div id="map"></div>
+  </section>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm_uvdaJ8xFOeZ4FgckzUFDdHW7wDux-A&callback=initMap">
   </script>
