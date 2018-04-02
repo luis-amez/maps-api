@@ -13,7 +13,8 @@
   text-align: center;
 }
 
-#travel-panel {
+#travel-panel,
+#destination-input {
   margin: 10px;
   font-size: 0.8em;
 }
@@ -25,7 +26,8 @@
     font-size: 1em;
   }
 
-  #travel-panel {
+  #travel-panel,
+  #destination-input {
     font-size: 1em;
   }
 }
