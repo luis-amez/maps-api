@@ -31,7 +31,13 @@ function initMap() {
   // Add event listener for user destination selection
   autocomplete.addListener('place_changed', function() {
     var place = autocomplete.getPlace();
-    destination = place.geometry.location;
+    if (!place.geometry) {
+      // User entered the name of a Place that was not suggested and
+      // pressed the Enter key, or the Place Details request failed.
+      window.alert("No details available for input: '" + place.name + "'");
+    } else {
+      destination = place.geometry.location;
+    }
     calculateAndDisplayRoute(directionsService, directionsDisplay, origin, destination);
   });
 
