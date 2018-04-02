@@ -52,7 +52,7 @@ function initMap() {
       calculateAndDisplayRoute(directionsService, directionsDisplay, origin, destination);
     }, function(error) {
       // Browser doesn't support geolocation
-      alert("I don't know where you are, sorry. Let's say that you are in Brighton.");
+      window.alert("I don't know where you are, sorry. Let's say that you are in Brighton.");
       console.log(error);
     });
   }
